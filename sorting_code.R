@@ -1,4 +1,4 @@
-library(rtweet)
+library(rtweet) # I have the development version from github installed
 library(dplyr)
 
 # This is written on the assumption that R users have set the working directory
