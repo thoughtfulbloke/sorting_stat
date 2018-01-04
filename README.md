@@ -46,9 +46,9 @@ The final sorting stat is calculated by working out the percentage that each pro
 
 To run code, in sorting_code.R, you are going to need to use R, have the csvs from this repo, be comfortable enough with the rtweet package to set up your own access token, and modify line 9 to put in the account you are analyzing.
 
-## An example implemenation
+## An example implementation
 
-Maëlle Salmon, @ma_salmon on Twitter, has compared the proportions in each house of python and rstats Twitter on the basis of a population of javascript Tweets as the reference group:
+[Maëlle Salmon](https://github.com/maelle/) has compared the proportions in each house of python and rstats Twitter on the basis of a population of javascript Tweets as the reference group:
 
 http://www.masalmon.eu/2018/01/01/sortinghat/
 
