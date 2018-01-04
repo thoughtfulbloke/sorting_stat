@@ -1,5 +1,5 @@
-library(rtweet) # I have the development version from github installed
-library(dplyr)
+library(rtweet, quietly=TRUE, warn.conflicts=FALSE)
+library(dplyr, quietly=TRUE, warn.conflicts=FALSE)
 
 # This is written on the assumption that R users have set the working directory
 # to the folder containing the csv file, know how to use the rtweet package,

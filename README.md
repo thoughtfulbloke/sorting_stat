@@ -60,3 +60,22 @@ You then want to map to localhost (port 80) so the browser can easily open and a
 ```
 docker run -p 80:80 vanessa/sorting-hat vsoch
 ```
+
+and you can of course change the user!
+
+```
+docker run -p 80:80 vanessa/sorting-hat SingularityApp
+
+       House Proportion Score
+1  Slytherin      0.647  30.0
+2 Hufflepuff      0.578  26.8
+3  Ravenclaw      0.562  26.0
+4 Gryffindor      0.372  17.2
+```
+
+And if you want an interactive shell into the container to poke around:
+
+```
+docker run -it --entrypoint bash -p 80:80 vanessa/sorting-hat
+root@ab91f67a5f76:/code#
+```
