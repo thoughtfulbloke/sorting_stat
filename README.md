@@ -47,3 +47,35 @@ The final sorting stat is calculated by working out the percentage that each pro
 To run code, in sorting_code.R, you are going to need to use R, have the csvs from this repo, be comfortable enough with the rtweet package to set up your own access token, and modify line 9 to put in the account you are analyzing.
 
 
+### Docker
+
+A [Dockerfile](Dockerfile) has been added to build a container to run this for you, and the container is also [available on Docker Hub](https://hub.docker.com/r/vanessa/sorting_stat/). To build locally:
+
+```
+docker build -t vanessa/sorting-hat .
+```
+
+You then want to map to localhost (port 80) so the browser can easily open and authenticate with rtweet OAuth. Interestingly, I didn't need to use the code for this (and got weird errors when I tried). To run, run the container and provide the Twitter user you want to analyze:
+
+```
+docker run -p 80:80 vanessa/sorting-hat vsoch
+```
+
+and you can of course change the user!
+
+```
+docker run -p 80:80 vanessa/sorting-hat SingularityApp
+
+       House Proportion Score
+1  Slytherin      0.647  30.0
+2 Hufflepuff      0.578  26.8
+3  Ravenclaw      0.562  26.0
+4 Gryffindor      0.372  17.2
+```
+
+And if you want an interactive shell into the container to poke around:
+
+```
+docker run -it --entrypoint bash -p 80:80 vanessa/sorting-hat
+root@ab91f67a5f76:/code#
+```
