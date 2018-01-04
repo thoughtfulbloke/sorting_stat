@@ -47,3 +47,16 @@ The final sorting stat is calculated by working out the percentage that each pro
 To run code, in sorting_code.R, you are going to need to use R, have the csvs from this repo, be comfortable enough with the rtweet package to set up your own access token, and modify line 9 to put in the account you are analyzing.
 
 
+### Docker
+
+A [Dockerfile](Dockerfile) has been added to build a container to run this for you, and the container is also available on Docker Hub. To build locally:
+
+```
+docker build -t vanessa/sorting-hat .
+```
+
+You then want to map to localhost (port 80) so the browser can easily open and authenticate with rtweet OAuth. Interestingly, I didn't need to use the code for this (and got weird errors when I tried). To run, run the container and provide the Twitter user you want to analyze:
+
+```
+docker run -p 80:80 vanessa/sorting-hat vsoch
+```
