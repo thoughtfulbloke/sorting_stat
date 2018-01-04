@@ -46,10 +46,15 @@ The final sorting stat is calculated by working out the percentage that each pro
 
 To run code, in sorting_code.R, you are going to need to use R, have the csvs from this repo, be comfortable enough with the rtweet package to set up your own access token, and modify line 9 to put in the account you are analyzing.
 
+## An example implemenation
 
-### Docker
+Maëlle Salmon, @ma_salmon on Twitter, has compared the proportions in each house of python and rstats Twitter on the basis of a population of javascript Tweets as the reference group:
 
-A [Dockerfile](Dockerfile) has been added to build a container to run this for you, and the container is also [available on Docker Hub](https://hub.docker.com/r/vanessa/sorting_stat/). To build locally:
+http://www.masalmon.eu/2018/01/01/sortinghat/
+
+## Docker
+
+A [Dockerfile](Dockerfile) has been added to build a container to run this for you by github user vsoch, and the container is also [available on Docker Hub](https://hub.docker.com/r/vanessa/sorting_stat/). To build locally:
 
 ```
 docker build -t vanessa/sorting-hat .
