@@ -49,7 +49,7 @@ To run code, in sorting_code.R, you are going to need to use R, have the csvs fr
 
 ### Docker
 
-A [Dockerfile](Dockerfile) has been added to build a container to run this for you, and the container is also available on Docker Hub. To build locally:
+A [Dockerfile](Dockerfile) has been added to build a container to run this for you, and the container is also [available on Docker Hub](https://hub.docker.com/r/vanessa/sorting_stat/). To build locally:
 
 ```
 docker build -t vanessa/sorting-hat .
