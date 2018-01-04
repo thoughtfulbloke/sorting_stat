@@ -6,7 +6,18 @@ library(dplyr)
 # have created an authorisation token called twitter_token,
 # and can change the user part of the next line 
 
-evidence <- get_timeline(user="your_account_goes_here", n=1000, token=twitter_token)
+args = commandArgs(trailingOnly=TRUE)
+
+if (length(args)==0) {
+    stop("Twitter user required as an argument!", call.=FALSE)
+} else {
+    user = args[1]
+}
+
+evidence <- get_timeline(user=user, n=1000)
+
+#twitter_token <- "8EfMPFhSkaGNm0rpQIe4YfsZC"
+#evidence <- get_timeline(user=user, n=1000, token=twitter_token)
 
 compare_with <- read.csv("corpus_people.csv") %>% mutate(isSortee = FALSE)
 
